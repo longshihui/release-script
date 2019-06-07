@@ -12,9 +12,11 @@ const gitDefaultArgs = {
 
 async function getCommits(branch) {
     const args = Object.assign({}, gitDefaultArgs, {
-        branches: branch
+        _: [branch],
+        format: '%H'
     });
-    return await exec(`git log ${dargs(args).join(' ')}`);
+    const { stdout } = await exec(`git log ${dargs(args).join(' ')}`);
+    return stdout.split('\n').filter(commit => commit !== '');
 }
 
 module.exports = async function(ctx) {
