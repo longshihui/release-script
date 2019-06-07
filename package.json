@@ -1,0 +1,24 @@
+{
+  "name": "@colorless/release-script",
+  "version": "1.0.0",
+  "description": "customizable release script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longshihui/release-script.git"
+  },
+  "keywords": [
+    "release",
+    "script",
+    "customizable"
+  ],
+  "author": "longshihui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/longshihui/release-script/issues"
+  },
+  "homepage": "https://github.com/longshihui/release-script#readme"
+}
