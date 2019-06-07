@@ -2,6 +2,9 @@
   "name": "@colorless/release-script",
   "version": "1.0.0",
   "description": "customizable release script",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "release-script": "./bin/release-script.js"
   },
