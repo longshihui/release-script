@@ -2,8 +2,9 @@
  * 发布版本脚本
  */
 const ReleaseWorkflow = require('./lib/ReleaseWorkflow');
-module.exports = api => {
-    api.registerCommand('release', async () => {
+
+module.exports = {
+    async run() {
         const workflow = new ReleaseWorkflow();
         // 判断是否是发布分支
         workflow.addStep(require('./steps/isMasterBranch'));
@@ -20,5 +21,5 @@ module.exports = api => {
         // 同步到git
         workflow.addStep(require('./steps/sync2Git'));
         await workflow.run();
-    });
+    }
 };
