@@ -2,6 +2,9 @@
   "name": "@colorless/release-script",
   "version": "1.0.0",
   "description": "customizable release script",
+  "bin": {
+    "release-script": "./bin/release-script.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
