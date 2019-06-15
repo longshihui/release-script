@@ -27,6 +27,7 @@ module.exports = async function(ctx) {
     if (
         masterCommits.length &&
         devBranch.length &&
+        masterCommits.length > devCommits.length &&
         masterCommits.includes(devCommits[0])
     ) {
         throw new Error(`[success]已经是最新版本, 无需更新`);
